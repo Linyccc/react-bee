@@ -1,0 +1,96 @@
+/* stylelint-disable */
+@import '~antd/lib/style/mixins/clearfix.less';
+
+/**
+ * @ Name:   未知高度垂直居中组件
+ * @ Usage:  支持图片，单行或多行文字，以及图文混排
+ * @ Note:   保证未知高度的.middle-item（以及它的子元素）垂直居于它所在的容器
+             继承自http://thx.github.io/cube/doc/layout#section-4
+ * @ 兼容:   IE7及以上
+ */
+
+/* 去除 inline-block 的空隙 */
+.middle-item {
+  height: 100%; /* 继承父级高度 */
+  font-size: 0;
+  *word-spacing: -1px; /* IE6、7 */
+}
+
+/* 修复 Safari 5- inline-block 的空隙 */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .middle-item {
+    letter-spacing: -5px;
+  }
+}
+
+/* 使用空标签生成一个高度100%的参照元素 */
+.middle-item .middle-item-hack {
+  display: inline-block;
+  *display: inline;
+  width: 0;
+  height: 100%;
+  font-size: 0;
+  vertical-align: middle;
+  *zoom: 1;
+}
+.middle-item .middle-item-body {
+  display: inline-block;
+  *display: inline;
+  width: 100%; /* 保证连续字符也能居中 */
+  margin: 0 !important;
+  padding: 0 !important; /* 防止设置边距导致居中失效 */
+  font-size: 12px;
+  letter-spacing: normal;
+  white-space: normal; /* 保证连续字符换行 */
+  vertical-align: middle; /* 保证文字垂直居中 */
+  word-wrap: break-word;
+  word-spacing: normal;
+  *zoom: 1;
+}
+.middle-item .middle-item-img {
+  display: inline-block;
+  *display: inline;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important; /* 防止设置边距导致居中失效 */
+  font-size: 0;
+  text-align: center; /* 图片默认水平居中 */
+  vertical-align: middle;
+  *zoom: 1;
+}
+.middle-item img {
+  vertical-align: middle; /* 去除现代浏览器 img 底部空隙 */
+}
+
+.welcome {
+  max-width: 800px;
+  height: 720px;
+  .clearfix();
+
+  margin: 0 auto;
+  .txt {
+    float: left;
+    width: 400px;
+    height: 100%;
+    padding-left: 100px;
+    h1 {
+      margin-bottom: 16px;
+      font-size: 28px;
+      line-height: 1em;
+    }
+    h2 {
+      margin-bottom: 16px;
+      font-size: 40px;
+      line-height: 1em;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .pic {
+    float: right;
+    width: 400px;
+    height: 100%;
+  }
+}

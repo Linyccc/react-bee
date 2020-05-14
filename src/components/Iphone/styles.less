@@ -1,0 +1,105 @@
+.iphone {
+  :global {
+    .ant-modal {
+      top: 100px;
+    }
+    .ant-modal-content {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .ant-modal-close-x {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+
+  .device {
+    position: relative;
+    width: 292px;
+    height: 600px;
+    margin: 0 auto;
+    background-image: url('./img/device-sprite.png');
+    background-repeat: no-repeat;
+    background-position: -292px 0;
+    background-size: 300%;
+  }
+
+  .device-fixed,
+  .menu-fixed {
+    position: fixed;
+  }
+
+  .window {
+    position: absolute;
+    top: 103px;
+    left: 29px;
+    width: 234.16px;
+    height: 403px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 13px;
+    line-height: 1;
+    background: #fbfbfb;
+  }
+
+  .status-bar {
+    position: absolute;
+    top: 87px;
+    left: 27px;
+    z-index: 99;
+    width: 236.16px;
+    height: 14.76px;
+    background: url('./img/status-bar.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .home-btn {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    width: 53.6px;
+    height: 54.4px;
+    margin-left: -26.5px;
+    background-image: url('./img/home-btn.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+    animation: spin 4s linear infinite;
+  }
+
+  &.lg {
+    .device {
+      width: 395px;
+      height: 813px;
+      background-position: -395px 0;
+    }
+    .window {
+      top: 137px;
+      left: 37px;
+      width: 321px;
+      height: 549px;
+    }
+    .status-bar {
+      top: 117px;
+      left: 37px;
+      width: 320px;
+      height: 20px;
+    }
+    .home-btn {
+      bottom: 39px;
+      left: 50%;
+      width: 67px;
+      height: 68px;
+      margin-left: -33.5px;
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+  }
+}

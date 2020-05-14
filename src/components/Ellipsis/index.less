@@ -1,0 +1,25 @@
+.ellipsis {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 100%;
+  word-break: break-all;
+}
+
+.lines {
+  position: relative;
+  .shadow {
+    position: relative;
+    z-index: -999;
+    display: block;
+    color: transparent;
+    opacity: 0;
+  }
+}
+
+.lineClamp {
+  position: relative;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,69 @@
+@import '~antd/lib/style/themes/default.less';
+
+.wrapper {
+  :global {
+    //修复size=small时 th部分底色变成白色
+    .ant-table-thead > tr > th {
+      background-color: #fafafa !important;
+    }
+    //修复圆角泛白
+    .ant-table-scroll {
+      border-radius: 8px;
+      //修复水平滚动模式下，始终会有滚动条的bug
+      & > .ant-table-body {
+        overflow-x: auto !important;
+      }
+    }
+    //无数据时 补一个边线
+    .ant-table-empty {
+      .ant-table-placeholder {
+        min-height: 300px;
+        line-height: 300px;
+        border-bottom: @border-width-base @border-style-base @border-color-split;
+      }
+    }
+    //size=small时边框重复
+    .ant-table-small {
+      border: none;
+    }
+    .ant-table-wrapper {
+      border: @border-width-base @border-style-base @border-color-split;
+      border-width: 1px 1px 0;
+      border-radius: 8px 8px 0 0;
+    }
+    .ant-table-thead > tr > th:last-child .ant-table-filter-icon {
+      border-radius: 0 8px 0 0;
+    }
+  }
+
+  .advanced-footer {
+    display: block;
+    padding: 0 8px;
+    color: @table-header-color;
+    background: @table-header-bg;
+    border: @border-width-base @border-style-base @border-color-split;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 8px 8px;
+    zoom: 1;
+    &::after {
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden;
+      content: '.';
+    }
+    .actions-wrapper {
+      float: left;
+      line-height: 44px;
+      :global(.ant-btn) + :global(.ant-btn) {
+        margin-left: 8px;
+      }
+    }
+    .pagination-wrapper {
+      float: right;
+    }
+    :global(.ant-pagination) {
+      margin: 6px 0;
+    }
+  }
+}

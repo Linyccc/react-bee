@@ -1,0 +1,55 @@
+:global {
+  .cube-ComboCascader {
+    width: 100%;
+    .inline-block {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .ant-input-group {
+      top: 0 !important;
+      display: table !important;
+    }
+    .buttons-wrapper {
+      display: table-cell;
+      width: 1px;
+      line-height: 1;
+      vertical-align: middle;
+      .ant-btn {
+        margin-left: 8px;
+      }
+    }
+
+    .ant-select-selection-selected-value {
+      line-height: 27px;
+    }
+
+    .ant-select-arrow svg {
+      transition: transform 0.3s;
+    }
+
+    .ant-input-group-addon + .ant-select > .ant-select-selection {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .ant-select-selection--multiple .ant-select-selection__rendered {
+      margin-left: 11px;
+    }
+    .trigger {
+      cursor: pointer;
+    }
+
+    .ant-select-lg .ant-select-selection-selected-value {
+      line-height: 35px;
+    }
+
+    .ant-select-search__field__wrap {
+      max-width: 100%;
+    }
+    &.cube-ComboCascader-open {
+      .ant-select-arrow svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

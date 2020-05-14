@@ -1,0 +1,718 @@
+// === Colors Bootstrap === //
+@gray-base: #000; // 突显的文字
+@gray-darker: #333; //用于标题 lv1
+@gray-dark: #666; // 默认正文 lv2
+@gray: #999; // 说明,描述文字 lv3
+@gray-light: #999; // 边框线
+@gray-lighter: #eee; // 鼠标移入背景
+@gray-bright: #eee; // 分割线,禁用背景
+@gray-brighter: #f8f8f8; // 面板标题背景
+@gray-highbright: #fafafa; // 奇偶行背景
+
+@brand-primary: #fa9022; //默认的主色，蓝色
+@brand-info: #64acff; //默认的信息色，浅蓝色
+@brand-success: #65ae16; //默认的正确色，绿色
+@brand-warning: #ffd033; //默认的警告色，黄色
+@brand-danger: #fd5527; //默认的错误色，红色
+
+// === Scaffolding Bootstrap === //
+
+@body-bg: #f2f2f2; //默认的背景
+
+@text-color: @gray-darker; //主要的文字
+@text-weak-color: @gray-dark; //次要的文字
+@text-weaker-color: @gray; //更次要的文字
+@text-disabled-color: #ccc; //禁用提示性文字
+
+@link-color: @brand-primary; //默认的链接颜色
+@link-hover-color: mix(#fff, @brand-primary, 20%);
+@link-active-color: mix(#000, @brand-primary, 10%);
+
+//=== Typography Bootstrap ===//
+
+//@font-family-base: Tahoma,Arial,"Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+@font-family-base: Tahoma, 'Microsoft YaHei', sans-serif;
+@text-muted: @text-weaker-color;
+
+@font-size-base: 14px; //默认的字号
+@font-size-large: 16px;
+@font-size-small: 12px;
+
+@font-size-h1: 24px;
+@font-size-h2: 18px;
+@font-size-h3: 16px;
+@font-size-h4: 14px;
+@font-size-h5: 14px;
+@font-size-h6: 12px;
+
+@line-height-base: 1.428571429;
+@line-height-large: 1.3333333;
+@line-height-small: 1.5;
+@line-height-normal: 1; //默认的单倍行距
+@line-height-computed: floor((@font-size-base * @line-height-base));
+
+// ==== common 自定义变量 === //
+@brand-hover-primary: mix(#fff, @brand-primary, 20%);
+@brand-active-primary: mix(#000, @brand-primary, 10%);
+
+@brand-hover-info: mix(#fff, @brand-info, 20%);
+@brand-active-info: mix(#000, @brand-info, 10%);
+
+@brand-hover-success: mix(#fff, @brand-success, 20%);
+@brand-active-success: mix(#000, @brand-success, 10%);
+
+@brand-hover-warning: mix(#fff, @brand-warning, 20%);
+@brand-active-warning: mix(#000, @brand-warning, 10%);
+
+@brand-hover-danger: mix(#fff, @brand-danger, 20%);
+@brand-active-danger: mix(#000, @brand-danger, 10%);
+
+@padding-base: 10px; //默认的间距
+@padding-large: @padding-base*2; //20px
+@padding-small: @padding-base / 2; //5px
+
+@border-color: #d4d5d6; //默认的边线
+@divide-color: #eee; //默认的分割线
+@icon-color: @text-weak-color; //默认的图标颜色
+
+@block-content-bg: #fff; //默认的内容区域背景
+@block-hover-bg: #eee; //默认的鼠标悬停背景
+//@block-active-bg:       #b8e986;                            //默认的鼠标选中背景
+@block-active-bg: rgba(184, 233, 134, 0.3); //默认的鼠标选中背景
+@block-accent-bg: @gray-highbright; //默认的表单奇偶数背景
+@block-disabled-bg: #fafafa; //默认的禁用背景
+
+@move-time: 0.2s;
+
+@box-shadow-bg: rgba(107, 122, 153, 0.3);
+@box-shadow-top: 0 -6px 10px 0 @box-shadow-bg;
+@box-shadow-btm: 0 6px 10px 0 @box-shadow-bg;
+@dropdown-max-width: 240px;
+@dropdown-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+//dropdownlist
+
+@scrollbar-width: 6px;
+@scrollbar-track-bg: #e5e5e5;
+@scrollbar-thumb-bg: #ccc;
+
+//========= 门户框架变量--比较特殊 ===========//
+
+@portal-login-bg: #fff;
+
+@portal-min-width: 1000px; //门户的最小宽度
+@portal-body-bg: @body-bg;
+@portal-text-color: #b3b3b3;
+@portal-primary: #258dfd; //门户默认的颜色
+@portal-dark-primary: mix(#000, @portal-primary, 16%); //门户的侧边栏颜色
+@portal-hover-primary: mix(#000, @portal-primary, 16%); //门户的鼠标悬停颜色
+
+@portal-topbar-left: #fff;
+@portal-topbar-hover-left: #f5f5f5;
+@portal-topbar-active-left: @portal-topbar-hover-left;
+
+@portal-topbar-right: #fff;
+@portal-topbar-hover-right: #f5f5f5;
+@portal-topbar-active-right: @portal-topbar-hover-right;
+
+@portal-border-color: @border-color;
+
+@portal-tabs-bg: #fafafa; //门户tabs背景色
+@portal-tabs-color: #627499; //门户tabs文字颜色
+@portal-tabs-border: #eee; //门户tabs边线样色
+@portal-tabs-hover-bg: @brand-primary; //门户tabs移入颜色
+@portal-tabs-active-bg: @brand-primary; //门户tabs选中颜色
+
+@portal-base-padding: @padding-base;
+@portal-large-padding: @portal-base-padding * 2;
+@portal-small-padding: @portal-base-padding / 2;
+
+@portal-header-height: 60px;
+@portal-tabs-height: 50px;
+
+@portal-sidebar-bg: #363742;
+@portal-sidebar-width: 174px;
+@portal-sidebar-item-height: 50px;
+@portal-copyright-height: 40px;
+
+// === Components Bootstrap ===//
+
+@padding-base-vertical: @padding-base;
+@padding-base-horizontal: @padding-base;
+
+@padding-large-vertical: @padding-large; //20px
+@padding-large-horizontal: @padding-large; //20px
+
+@padding-small-vertical: @padding-small; //5px
+@padding-small-horizontal: @padding-small; //5px
+
+@padding-xs-vertical: @padding-small / 2; //2px
+@padding-xs-horizontal: @padding-small;
+
+@border-radius-base: 2px; //默认的圆角
+@border-radius-large: 8px;
+@border-radius-small: @border-radius-base;
+
+@component-active-color: @block-content-bg;
+@component-active-bg: @brand-primary;
+
+// === Tables Bootstrap === //
+
+@table-cell-padding: @padding-base;
+@table-condensed-cell-padding: @padding-small;
+@table-bg-accent: @block-accent-bg;
+@table-bg-hover: @gray-highbright;
+@table-bg-active: @table-bg-hover;
+@table-border-color: @divide-color;
+
+//=== Buttons Bootstrap === //
+
+@btn-default-color: @text-weak-color;
+@btn-default-bg: @block-content-bg;
+@btn-default-border: @border-color;
+
+@btn-primary-color: #fff;
+@btn-primary-bg: @brand-primary;
+@btn-primary-border: mix(#000, @brand-primary, 10%);
+
+@btn-success-color: #fff;
+@btn-success-bg: @brand-success;
+@btn-success-border: mix(#000, @brand-success, 10%);
+
+@btn-info-color: #fff;
+@btn-info-bg: @brand-info;
+@btn-info-border: mix(#000, @brand-info, 10%);
+
+@btn-warning-color: #fff;
+@btn-warning-bg: @brand-warning;
+@btn-warning-border: mix(#000, @brand-warning, 10%);
+
+@btn-danger-color: #fff;
+@btn-danger-bg: @brand-danger;
+@btn-danger-border: mix(#000, @brand-danger, 10%);
+
+// === Form Bootstrap === //
+
+@input-bg: @block-content-bg;
+@input-bg-disabled: @block-disabled-bg;
+@input-color: @text-weak-color;
+@input-border: @border-color;
+@input-border-focus: @brand-primary;
+@input-color-placeholder: @text-weaker-color;
+
+@form-group-margin-bottom: @padding-large;
+@input-width-base: 180px;
+@input-height-base: (@line-height-computed + (@padding-small-vertical*2) + 2);
+@input-height-large: (
+  ceil(@font-size-large * @line-height-large) + (@padding-base-vertical * 2) + 2
+);
+@input-height-small: (
+  floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2
+);
+
+@legend-color: @text-weak-color;
+@legend-border-color: @border-color;
+
+@input-group-addon-bg: @input-bg;
+@input-group-addon-border-color: @input-border;
+
+@input-border-radius: @border-radius-base;
+@input-border-radius-large: @border-radius-large;
+@input-border-radius-small: @border-radius-small;
+
+// === Dropdowns Bootstrap === //
+
+@dropdown-bg: @block-content-bg;
+@dropdown-border: @border-color;
+@dropdown-fallback-border: @border-color;
+@dropdown-divider-bg: @gray-brighter;
+@dropdown-link-color: @link-color;
+@dropdown-link-hover-color: @link-hover-color;
+@dropdown-link-hover-bg: @block-hover-bg;
+@dropdown-link-active-color: @component-active-color;
+@dropdown-link-active-bg: @component-active-bg;
+@dropdown-link-disabled-color: @block-disabled-bg;
+@dropdown-header-color: @block-disabled-bg;
+@dropdown-caret-color: @icon-color;
+
+// === Grid system  === //
+
+@grid-gutter-width: @padding-base;
+
+//=== Pagination Bootstrap ===//
+
+@pagination-color: @text-weak-color;
+@pagination-bg: @block-content-bg;
+@pagination-border: @border-color;
+
+@pagination-hover-color: @link-hover-color;
+@pagination-hover-bg: @block-hover-bg;
+@pagination-hover-border: @border-color;
+
+@pagination-active-color: #fff;
+@pagination-active-bg: @brand-primary;
+@pagination-active-border: @brand-primary;
+
+@pagination-disabled-color: @text-weaker-color;
+@pagination-disabled-bg: @block-disabled-bg;
+@pagination-disabled-border: @border-color;
+
+// === Pager Bootstrap === //
+
+@pager-border-radius: 16px;
+
+// === Jumbotron Bootstrap === //
+
+@jumbotron-padding: @padding-large*2;
+
+// === Form states and alerts Bootstrap === //
+
+@state-success-text: mix(#fff, @brand-success, 20%);
+@state-success-bg: mix(#fff, @brand-success, 90%);
+@state-success-border: mix(#fff, @brand-success, 70%);
+
+@state-info-text: mix(#000, @brand-info, 20%);
+@state-info-bg: mix(#fff, @brand-info, 90%);
+@state-info-border: mix(#fff, @brand-info, 70%);
+
+@state-warning-text: mix(#000, @brand-warning, 20%);
+@state-warning-bg: mix(#fff, @brand-warning, 90%);
+@state-warning-border: mix(#fff, @brand-warning, 70%);
+
+@state-danger-text: mix(#000, @brand-danger, 20%);
+@state-danger-bg: mix(#fff, @brand-danger, 90%);
+@state-danger-border: mix(#fff, @brand-danger, 70%);
+
+// === Popovers Bootstrap === //
+
+@popover-bg: @block-content-bg;
+@popover-border-color: @border-color;
+@popover-fallback-border-color: @border-color;
+
+// === label Bootstrap === //
+
+@label-default-bg: @gray-brighter;
+@label-primary-bg: @brand-primary;
+@label-success-bg: @brand-success;
+@label-info-bg: @brand-info;
+@label-warning-bg: @brand-warning;
+@label-danger-bg: @brand-danger;
+
+// === Modals Bootstrap === //
+
+@modal-inner-padding: @padding-base;
+@modal-title-padding: @padding-base;
+@modal-content-bg: @gray-highbright;
+@modal-content-border-color: @divide-color;
+@modal-content-fallback-border-color: @divide-color;
+@modal-header-border-color: @divide-color;
+@modal-footer-border-color: @divide-color;
+
+// === Alerts Bootstrap === //
+
+@alert-padding: @padding-large;
+
+// === Progress Bootstrap //
+@progress-bg: @gray-brighter;
+
+// === List group Bootstrap //
+
+@list-group-bg: @block-content-bg;
+@list-group-border: @divide-color;
+@list-group-hover-bg: @block-hover-bg;
+@list-group-active-color: @text-weak-color;
+@list-group-active-bg: @block-active-bg;
+
+@list-group-disabled-color: @text-weaker-color;
+@list-group-disabled-bg: @block-disabled-bg;
+@list-group-disabled-text-color: @text-weaker-color;
+
+@list-group-link-color: @text-weak-color;
+@list-group-link-hover-color: @list-group-link-color;
+@list-group-link-heading-color: @text-color;
+
+@list-group-link-color: @text-weak-color;
+@list-group-link-heading-color: @text-color;
+
+// === Panels Bootstrap === //
+
+@panel-bg: @block-content-bg;
+@panel-body-padding: @padding-base;
+@panel-heading-padding: @padding-base / 2 @padding-base;
+@panel-footer-padding: @panel-heading-padding;
+@panel-border-radius: @border-radius-base;
+
+@panel-inner-border: @border-color;
+@panel-footer-bg: @block-content-bg;
+
+@panel-default-text: @text-weak-color;
+@panel-default-border: @border-color;
+@panel-default-heading-bg: #fafafa;
+@panel-footer-bg: @gray-brighter;
+
+@panel-primary-text: mix(#fff, @brand-primary, 20%);
+@panel-primary-border: mix(#fff, @brand-primary, 70%);
+@panel-primary-heading-bg: mix(#fff, @brand-primary, 90%);
+
+// === Thumbnails Bootstrap === //
+
+@thumbnail-padding: @padding-small;
+@thumbnail-border: @divide-color;
+@thumbnail-caption-padding: @padding-base;
+
+// === Wells Bootstrap === //
+
+@well-bg: @gray-brighter;
+@well-border: @divide-color;
+
+// === Breadcrumbs Bootstrap === //
+
+@breadcrumb-padding-vertical: @padding-base;
+@breadcrumb-padding-horizontal: @padding-large;
+@breadcrumb-bg: @gray-brighter;
+@breadcrumb-color: @text-weaker-color;
+@breadcrumb-active-color: @brand-primary;
+
+// ====================== Bootstrap end ====================== //
+
+// ====================== fish Default ====================== //
+
+// --- color --- //
+@default-bg-color: @block-content-bg;
+@default-border-color: @divide-color;
+@border-disabled-color: @divide-color;
+@disabled-text-color: @text-disabled-color;
+@component-base-color: @block-content-bg;
+@opacity-base: 0.5;
+
+// --- button --- //
+@button-min-width: 68px;
+
+// --- icon --- //
+@icon-prefix: glyphicon;
+
+// --- Panels --- //
+@panel-heading-button-margin: @padding-small;
+
+// --- accordion --- //
+@caret-width-accordion: 6px;
+
+// --- alert --- //
+@alert-min-width: 350px;
+@alert-max-width: 460px;
+@alert-toast-width: 500px;
+
+// --- progressbar --- //
+@progressbar-height: 2em;
+@progressbar-bg-color: @block-content-bg;
+@progressbar-border-radius: @border-radius-base;
+@progressbar-top: @padding-small;
+
+// --- slider --- //
+@slider-border-radius: @border-radius-base;
+@slider-color: @text-weak-color;
+@slider-bg-color: @gray-brighter;
+@slider-btn-bg-color: #fff;
+@slider-btn-shadow: 0 0 3px 3px rgba(204, 204, 204, 0.2);
+@slider-width: 16px;
+@slider-vertical-height: 100px;
+@slider-tick-width: 2px;
+@slider-tick-height: 15px;
+@slider-tick-margin: -1px;
+
+// --- menu --- //
+@menu-item-hover-bg: @block-hover-bg;
+@menu-item-acitve-bg: @component-active-bg;
+@menu-item-acitve-color: @component-active-color;
+@menu-padding: @padding-small-vertical @padding-large-horizontal;
+@menu-horizontal-padding: @menu-padding;
+@menu-min-width: 160px;
+@menu-icon-margin: 2px 0 0 5px;
+
+// --- tabs --- //
+@nav-tabs-nav-padding: 0;
+@nav-tabs-panel-padding: @panel-body-padding;
+@nav-tabs-bg: #fafafa;
+@nav-tabs-border-color: @border-color;
+@nav-tabs-nav-border: 1px solid @nav-tabs-border-color;
+@set-max-width: false;
+@nav-tabs-link-padding: 0 @padding-large-horizontal;
+@nav-tabs-link-height: round(@font-size-large* @line-height-base + @padding-base-vertical*2);
+@nav-tabs-link-margin-left: 0;
+@nav-tabs-link-margin-right: 0;
+@nav-tabs-link-margin-bottom: -1px;
+@nav-tabs-link-color: @text-color;
+@nav-tabs-link-close-color: @icon-color;
+@nav-tabs-link-bg: transparent;
+@nav-tabs-link-border-color: transparent;
+@nav-tabs-link-border-width: 1px 0 0 0;
+@nav-tabs-link-border-style: solid;
+@nav-tabs-link-hover-padding: @nav-tabs-link-padding;
+@nav-tabs-link-hover-margin-bottom: -1px;
+@nav-tabs-link-hover-color: #fff;
+@nav-tabs-link-hover-close-color: #fff;
+@nav-tabs-link-hover-bg: @brand-primary;
+@nav-tabs-link-hover-border-color: @brand-primary;
+@nav-tabs-link-hover-border-width: 1px 0 0 0;
+@nav-tabs-link-hover-border-style: solid;
+@nav-tabs-active-link-hover-padding: @nav-tabs-link-padding;
+@nav-tabs-active-link-hover-margin: -1px;
+@nav-tabs-active-link-hover-color: #fff;
+@nav-tabs-active-link-hover-bg: @brand-primary;
+@nav-tabs-active-link-hover-border-color: @brand-primary;
+@nav-tabs-active-link-hover-border-width: 1px 0 0 0;
+@nav-tabs-active-link-hover-border-style: solid;
+@nav-disabled-link-hover-padding: @nav-tabs-link-padding;
+@nav-disabled-link-hover-margin: -1px;
+@nav-disabled-link-color: @gray-light;
+@nav-disabled-link-hover-bg: @nav-tabs-link-hover-bg;
+@nav-disabled-link-hover-border-width: 1px 0 0 0;
+@nav-disabled-link-hover-border-style: solid;
+@nav-disabled-link-hover-border-color: @nav-tabs-link-hover-border-color;
+@nav-tabs-paging-btn-width: auto;
+@nav-tabs-paging-btn-color: @nav-tabs-link-hover-color;
+@tabs-border-bg: @panel-default-heading-bg;
+@tabs-vertical-width: 100px;
+@tabs-border-link-hover-bg: @block-hover-bg;
+@tabs-border-link-hover-border-color: @border-color;
+@tabs-border-left-link-hover-border-color: @tabs-border-left-active-link-hover-border-color;
+@tabs-border-right-link-hover-border-color: @tabs-border-right-active-link-hover-border-color;
+@tabs-border-bottom-link-hover-border-color: @tabs-border-bottom-active-link-hover-border-color;
+@tabs-border-left-active-link-hover-border-color: @nav-tabs-border-color transparent
+  @nav-tabs-border-color @nav-tabs-border-color;
+@tabs-border-right-active-link-hover-border-color: @nav-tabs-border-color @nav-tabs-border-color
+  @nav-tabs-border-color transparent;
+@tabs-border-bottom-active-link-hover-border-color: transparent @nav-tabs-border-color
+  @nav-tabs-border-color @nav-tabs-border-color;
+@nav-tabs-pill-active-bg: @brand-primary;
+@nav-tabs-pill-active-color: #fff;
+@nav-tabs-pill-bg: transparent;
+@nav-tabs-pill-color: @text-color;
+@nav-tabs-pill-border-color: @border-color;
+
+// --- popup --- //
+@modal-header-bg: @block-content-bg;
+@modal-header-color: @text-color;
+
+// --- grid --- //
+@grid-bg: @block-content-bg;
+@grid-border: 1px solid @border-color;
+@grid-td-border-right: 1px solid @divide-color;
+@grid-border-color: @divide-color;
+@grid-titlebar-color: @text-color;
+@grid-titlebar-bg: @panel-default-heading-bg;
+@grid-titlebar-padding: @padding-base-vertical @padding-base-horizontal;
+@grid-titlebar-close-top: 12px;
+@grid-titlebar-title-padding-vertical: @padding-base-vertical;
+@grid-titlebar-title-padding-horizontal: 0;
+@grid-close-padding-horizontal: @padding-base-horizontal;
+@grid-header-color: @grid-titlebar-color;
+@grid-header-bg: @gray-brighter;
+@grid-header-text-align: left;
+@grid-th-cell-padding-horizontal: @padding-base-horizontal;
+@grid-th-cell-padding-vertical: 16px;
+@grid-td-cell-padding-horizontal: @padding-base-horizontal;
+@grid-td-cell-padding-vertical: 16px;
+@grid-th-cell-height: 2 * @grid-th-cell-padding-vertical + @font-size-base * 1 + 1;
+@grid-td-cell-height: 2 * @grid-td-cell-padding-vertical + @font-size-base * 1 + 1;
+@grid-body-color: @text-weak-color;
+@grid-active-bg: @block-active-bg;
+@grid-active-color: @text-weak-color;
+@grid-active-link-color: @brand-primary;
+@grid-hover-bg: @block-hover-bg;
+@grid-striped-color: @block-accent-bg;
+@grid-edit-padding: 2px;
+@grid-td-white-space: nowrap;
+@grid-resize-height: 14px;
+@grid-resize-margin: -2px -2px -2px 0;
+@grid-resize-mark-width: 2px;
+@grid-resize-mark-height: 100px;
+@grid-icon-sort-margin: 4px;
+@grid-cbox-margin-left: 0;
+@grid-pager-height: 24px;
+@grid-pager-padding-vertical: 1px;
+@grid-navbutton-padding-horizontal: @padding-base-horizontal;
+@grid-btn-color: @brand-primary;
+@grid-btn-disabled-color: @block-disabled-bg;
+@grid-pg-active-border: 1px solid @brand-primary;
+@grid-pg-active-font-weight: normal;
+@grid-pg-active-bg: @brand-primary;
+@grid-pg-active-color: @pagination-active-color;
+@grid-pg-height: @grid-pager-height - 2 * @grid-pager-padding-vertical;
+@grid-treewrap-width: 18px;
+@grid-tree-icon-color: @icon-color;
+@grid-tree-icon-base-color: @icon-color;
+@grid-tree-icon-base-hover-color: @brand-primary;
+@grid-active-tree-icon-color: @icon-color;
+@grid-active-tree-icon-base-color: @icon-color;
+@grid-active-tree-icon-base-hover-color: @brand-primary;
+@grid-subgrid-min-height: 50px;
+@grid-subgrid-padding: (@padding-base-vertical - 2) (@padding-base-horizontal - 10)
+  (@padding-base-vertical - 2) (@padding-base-horizontal - 4);
+@grid-userdata-height: 24px;
+@grid-userdata-padding-vertical: (
+    @grid-userdata-height - floor(@font-size-base * @line-height-base)
+  )/2;
+@grid-triangle-size: 8px;
+@columns-dialog-body-bg: #fff;
+@columns-dialog-footer-border-top: 1px solid @modal-footer-border-color;
+@columns-container-panel-border: 1px solid transparent;
+@columns-container-panel-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+@columns-container-panel-body-padding: @padding-large;
+@columns-container-panel-heading-border-color: transparent;
+@columns-container-panel-title-padding: 0;
+
+// --- datetimepicker --- //
+@datetimepicker-width: 280px;
+@datetimepicker-dropdown-padding: @padding-small;
+@datetimepicker-dropdown-arrow-color: @icon-color;
+@datetimepicker-disabled-color: @text-disabled-color;
+@datetimepicker-active-color: @brand-primary;
+@datetimepicker-time-margin: @padding-base 0;
+
+// --- dropdownlist --- //
+@dropdown-padding: @padding-base-vertical 0;
+@dropdown-item-padding: @padding-small-vertical @padding-large-horizontal;
+
+// --- tree --- //
+@tree-icon-height: round(@font-size-base* @line-height-base + @padding-small-vertical*2);
+@tree-padding: @padding-base;
+@tree-icon-margin: @padding-small-horizontal;
+@tree-ul-padding: @padding-large;
+@tree-mask-color: @gray-light;
+@tree-item-active-color: @brand-primary;
+@tree-item-hover-bg: @block-hover-bg;
+@tree-item-active-bg: @block-hover-bg;
+
+// --- placeholder --- //
+@placeholder-padding: @padding-xs-vertical @padding-base-horizontal;
+
+// --- pagination --- //
+@pagination-padding: 0 @padding-base-horizontal;
+@pagination-margin: 0 @padding-small-horizontal;
+@pagination-span-margin: 0 0 0 @padding-small-horizontal;
+
+// --- switchbutton --- //
+@switchbutton-label-padding: @padding-small-vertical 0;
+
+// --- slick --- //
+@slick-button-color: @icon-color;
+
+// --- sarchbar --- //
+@searchbar-text-margin: @padding-small;
+
+// --- navbar --- //
+@navbar-menu-padding: @padding-large;
+@navbar-mneu-state-color: @block-hover-bg;
+@navbar-padding: @padding-large;
+
+// --- label --- //
+@label-span-max-width: 160px;
+@label-border-color: @brand-primary;
+@label-item-padding: @padding-large;
+@label-item-margin: @padding-base;
+@label-item-border-radius: @padding-large;
+
+// ====================== fish Default end  ====================== //
+
+// === fileupload 自定义新增 === //
+@file-upload-img-width: 36px;
+@file-upload-img-height: @file-upload-img-width;
+@file-upload-bg: #fff;
+
+// === pictureupload 自定义新增 === //
+@picture-upload-width: 100px;
+@picture-upload-height: @picture-upload-width;
+@picture-upload-link-width: @picture-upload-width;
+@picture-upload-link-height: @picture-upload-link-width;
+
+// === label 自定义新增 ===//
+
+@label-item-height: 2 * @padding-base-vertical + @font-size-base;
+@label-multistep-hover-color: @text-weak-color;
+@label-multistep-active-color: @label-multistep-hover-color;
+@label-item-margin: @padding-small-vertical;
+
+@label-line-primary-bg: mix(#fff, @brand-primary, 90%);
+@label-line-primary-border: mix(#000, @brand-primary, 70%);
+@label-line-primary-color: mix(#000, @brand-primary, 10%);
+@label-line-success-bg: @state-success-bg;
+@label-line-success-border: @state-success-border;
+@label-line-success-color: @state-success-text;
+@label-line-info-bg: @state-info-bg;
+@label-line-info-border: @state-info-border;
+@label-line-info-color: @state-info-text;
+@label-line-warning-bg: @state-warning-bg;
+@label-line-warning-border: @state-warning-border;
+@label-line-warning-color: @state-warning-text;
+@label-line-danger-bg: @state-danger-bg;
+@label-line-danger-border: @state-danger-border;
+@label-line-danger-color: @state-danger-text;
+
+@label-time-color: #000;
+@label-time-border-width: 1px;
+@label-time-border-style: solid;
+@label-time-border-color: @divide-color;
+@label-time-bg: #fff;
+
+// === directory 自定义新增===//
+@directory-nav-bg: #fff;
+@directory-nav-li-height: 28px;
+@directory-nav-li-line-height: @directory-nav-li-height;
+@directory-nav-li-padding-right: 64px;
+@directory-nav-c-dot-width: 12px;
+@directory-nav-c-dot-height: @directory-nav-c-dot-width;
+
+//=== multiselect 自定义新增===//
+@multiselect-option-margin: @padding-small-vertical @padding-small-horizontal
+  @padding-small-vertical 0;
+@multiselect-option-padding: 2px 6px;
+@multiselect-option-border: @border-color;
+@multiselect-option-bg: @label-line-primary-bg;
+@multiselect-option-color: @label-line-primary-color;
+@multiselect-option-hover-border: mix(#000, @brand-primary, 20%);
+@multiselect-option-hover-bg: @multiselect-option-bg;
+@multiselect-option-hover-color: @multiselect-option-color;
+@multiselect-option-height: 2 * @padding-small-vertical + @font-size-base;
+@multiselect-option-radius: @border-radius-base;
+@multiselect-option-hover-padding-right: 12px;
+@multiselect-option-hover-padding-left: 0;
+
+// == dropdownlist 自定新增 == //
+@dropdown-link-color: @text-weak-color;
+@dropdown-link-hover-color: @dropdown-link-color;
+@dropdown-link-hover-bg: @block-hover-bg;
+@dropdown-link-active-color: @text-weak-color;
+@dropdown-link-active-bg: @block-hover-bg;
+
+@step-line-icon-color: @icon-color;
+@step-left-none-width: 0;
+@step-left-width: 80px;
+@step-right-width: @step-left-width;
+@step-left-padding: @step-left-width;
+@step-right-padding: @step-left-padding;
+@step-left-margin-top: -(@step-left-width / 4 + @step-dot-height / 2);
+@step-line-height: 24px;
+@step-local-margin-top: -1px;
+@step-local-bg: @brand-success;
+@step-dot-width: 12px;
+@step-dot-height: @step-dot-width;
+@step-dot-pass-width: 24px;
+@step-dot-pass-height: @step-dot-pass-width;
+@step-dot-border-width: 2px;
+@step-dot-border-style: solid;
+@step-dot-border-color: @divide-color;
+@step-dot-bg: @block-content-bg;
+@step-dot-margin-top: -6px;
+@step-dot-margin-left: -6px;
+@step-dot-pass-margin-top: -12px;
+@step-dot-pass-margin-left: -12px;
+@step-cont-li-width: 16.6%;
+
+@portal-header-height: 60px;
+@padding-base-horizontal: 20px;
+@padding-small-horizontal: 5px;
+@portal-topbar-hover-left: #f5f5f5;
+@portal-topbar-active-left: #f5f5f5;
+@text-color: #333;
+@theme-color: #fa9022;
+@portal-sidebar-width: 174px;

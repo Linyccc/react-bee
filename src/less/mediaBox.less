@@ -1,0 +1,42 @@
+/**
+  * @ Name:   双栏自适应 组件(tabel-cell)
+  * @ Usage:  通常用于双栏布局，如下
+  *           .media-box>(.media-left>a>img)+(.media-body)
+  *           .media-body装的是是'文字'的话,需要用..media-body-text-hack包裹，防止连续英文字符
+  *           .media-box>(.media-left>a>img)+(.media-body>.media-body-text-hack)
+  * @ Note:   tabel-cell只支持IE8及以上，这里通过奇巧淫技实现了兼容，解释如下：
+  http://www.zhangxinxu.com/wordpress/2010/10/%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E5%87%A0%E7%A7%8Ddisplaytable-cell%E7%9A%84%E5%BA%94%E7%94%A8/
+  * @ 兼容:   IE6及以上
+*/
+.media-box,
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.media-left,
+.media-right,
+.media-body {
+  vertical-align: top;
+}
+.media-left {
+  float: left;
+  padding-right: 10px;
+}
+.media-right {
+  float: right;
+  padding-left: 10px;
+}
+/* 基于display:table-cell的自适应布局 */
+.media-body {
+  display: table-cell;
+  *display: inline-block;
+  width: 2000px;
+  *width: auto;
+}
+/* fix：如果cell-item内包含连续英文字符换行 */
+.media-body-text-hack {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  word-wrap: break-word;
+}

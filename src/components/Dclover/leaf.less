@@ -1,0 +1,105 @@
+@import './utils.less';
+
+@baseWidth: calc(50% - 5px);
+@baseHeight: calc(50% - 5px);
+
+.base {
+  display: inline-block;
+  // position: absolute;
+  box-sizing: border-box;
+  width: @baseWidth;
+  min-width: 150px;
+  height: @baseHeight;
+  min-height: 150px;
+  color: rgba(255, 255, 255, 0.849);
+  font-size: 23.33333%;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.493);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.5s;
+  // text-shadow: 0px 0px 10px rgba(0,0,0,0.53);
+
+  &:nth-child(1) {
+    margin: 0 5px 5px 0;
+    &.actived {
+      border-radius: 100%;
+      transform: translate(-45px, -45px);
+    }
+    &:hover:not(.actived) {
+      transform: translateY(-10px);
+    }
+  }
+
+  &:nth-child(2) {
+    margin: 0 0 5px 5px;
+    &.actived {
+      border-radius: 100%;
+      transform: translate(45px, -45px);
+    }
+    &:hover:not(.actived) {
+      transform: translateY(-10px);
+    }
+  }
+
+  &:nth-child(3) {
+    margin: 5px 5px 0 0;
+    &.actived {
+      border-radius: 100%;
+      transform: translate(-45px, 45px);
+    }
+    &:hover:not(.actived) {
+      transform: translateY(10px);
+    }
+  }
+
+  &:nth-child(4) {
+    margin: 5px 0 0 5px;
+    &.actived {
+      border-radius: 100%;
+      transform: translate(45px, 45px);
+    }
+    &:hover:not(.actived) {
+      transform: translateY(10px);
+    }
+  }
+
+  :global(.middle-item-body) {
+    font-size: 32px;
+  }
+}
+
+.actived {
+  color: #fff;
+  text-shadow: 5px 5px 5px rgb(56, 55, 55);
+  border: 3px solid #fff;
+}
+
+.type1 {
+  background: rgba(238, 10, 10, 0.644);
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.type2 {
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.red {
+  background: rgba(238, 10, 10, 0.644);
+}
+
+.yellow {
+  background: rgba(252, 235, 3, 0.863);
+}
+
+.green {
+  background: rgba(149, 247, 3, 0.877);
+}
+
+.blue {
+  background: rgba(5, 190, 247, 0.856);
+}

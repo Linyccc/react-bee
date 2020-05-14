@@ -1,0 +1,140 @@
+/* stylelint-disable */
+@font-size-base: 14px; // 主字号
+@font-size-lg : @font-size-base + 2px;
+@font-size-sm : 12px;
+
+@heading-color: rgba(0, 0, 0, 0.85); // 标题色
+@text-color: rgba(0, 0, 0, 0.65); // 主文本色
+@text-color-secondary : rgba(0, 0, 0, .45); // 次文本色
+
+// vertical paddings
+@padding-lg : 24px; // containers
+@padding-md : 16px; // small containers and buttons
+@padding-sm : 12px; // Form controls and items
+@padding-xs : 8px; // small items
+
+.clearfix() {
+  &::before,
+  &::after {
+    display: table; // 2
+    content: ' '; // 1
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.wrap {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #4f5397;
+}
+
+.container {
+  background: url('./img/login-bg.jpg') no-repeat bottom center;
+  background-size: cover;
+}
+
+.head {
+  width: 90%;
+  margin: 0 auto;
+  padding: @padding-md*2;
+  .clearfix();
+  .logo,
+  .name {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .logo {
+    &,
+    img {
+      height: 48px;
+    }
+    & + .name {
+      margin-left: @padding-sm;
+    }
+  }
+  .name {
+    color: @heading-color;
+    font-size: 18px;
+  }
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+  .clearfix();
+  .picture {
+    position: relative;
+    float: left;
+    padding-top: 60px;
+    &,
+    img {
+      width: 510px;
+      height: 520px;
+    }
+    & + .form {
+      margin-left: @padding-md*2;
+    }
+    .pictureCell {
+      position: relative;
+      width: 560px;
+      height: 440px;
+    }
+  }
+  .form {
+    float: right;
+    width: 400px;
+    padding-top: 60px;
+    .title {
+      &,
+      img {
+        height: 48px;
+      }
+      & + .panel {
+        margin-top: @padding-md*2;
+      }
+      div {
+        height: 48px;
+        line-height: 48px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        font-family: '微软雅黑';
+      }
+    }
+    .panel {
+      padding: @padding-md*2;
+      background: #fff;
+      box-shadow: 0 16px 40px 0 rgba(94, 96, 186, 0.24);
+      .panelHead {
+        & + .panelBody {
+          margin-top: @padding-md*2;
+        }
+      }
+      .panelTit {
+        color: @heading-color;
+        font-size: @font-size-lg;
+      }
+      .panelSubtit {
+        color: @text-color-secondary;
+        font-size: @font-size-base;
+      }
+      .formItemCell {
+        margin-bottom: @padding-md;
+      }
+      .formItemTools {
+        :global(.ant-form-item-children) {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      :global(.ant-form-item:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

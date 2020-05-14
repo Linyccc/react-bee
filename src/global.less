@@ -1,0 +1,346 @@
+@import '../config/theme/variables.less';
+@import '~antd/lib/style/themes/default.less';
+@import './less/card.less';
+@import './less/notification.less';
+@import './less/modal.less';
+@import './less/middleItem.less';
+@import './less/mediaBox.less';
+@import './less/utils.less';
+// @import '../config/theme/bss/index.less';
+@import './less/fix-ie10.less';
+@import './less/fix-ie9.less';
+
+/* 重置滚动条样式 BEGIN */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 3px;
+}
+
+/* 滚动条 END */
+
+/* UTILS CSS BEGIN */
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.inline-block {
+  display: inline-block !important;
+}
+.block {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+.text-middle {
+  vertical-align: middle;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-warning {
+  color: @warning-color !important;
+}
+.text-danger {
+  color: @error-color !important;
+}
+.text-success {
+  color: @success-color !important;
+}
+.text-primary {
+  color: @primary-color !important;
+}
+.text-info {
+  color: @info-color !important;
+}
+.bold {
+  font-weight: bold;
+}
+.size-lg {
+  font-size: @font-size-base * 1.5 !important;
+}
+.pointer {
+  cursor: pointer !important;
+}
+.clearfix {
+  .clearfix();
+}
+// margin and padding utils
+.gutterUtils(margin; @slick-space-base;);
+.gutterUtils(padding; @slick-space-base;);
+
+/* UTILS CSS END */
+
+.tableList {
+  .tableListOperator {
+    margin-bottom: 16px;
+    button {
+      margin-right: 8px;
+    }
+  }
+}
+
+.layout-flow {
+  .ant-form-item {
+    display: flex;
+    margin-right: 0;
+    margin-bottom: @slick-space-base;
+    > .ant-form-item-label {
+      width: auto;
+      padding-right: 8px;
+      line-height: @input-height-base;
+    }
+    .ant-form-item-control {
+      line-height: @input-height-base;
+    }
+  }
+  .ant-form-item-control-wrapper {
+    flex: 1;
+  }
+
+  &.fix-label {
+    .ant-form-item {
+      > .ant-form-item-label {
+        width: 8em;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @screen-lg) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}
+
+/**
+  *******************************
+    重置ANTD CSS  BEGIN
+  *******************************
+**/
+
+/* form开始 */
+.bss-form-inline .ant-form-item {
+  display: table;
+  width: 100%;
+}
+.bss-form-inline .ant-form-item-label {
+  display: table-cell;
+  width: 1%;
+}
+.bss-form-inline .ant-form-item-control-wrapper {
+  display: table-cell;
+  width: 99%;
+}
+
+/* form结束 */
+
+/* card开始 */
+// .ant-card-extra {
+//   padding: 12px 0 !important;
+//   line-height: 32px !important;
+// }
+
+.ant-card + .ant-card {
+  margin-top: @slick-space-base;
+}
+
+/* tab开始 */
+
+.blockUI.blockPage,
+.blockUI.blockElement {
+  top: 40%;
+  left: 50%;
+  padding: 6px 12px;
+  background-color: #646464;
+  border-radius: 4px;
+}
+
+.blockUI.blockPage {
+  background: url(./assets/loading.gif) 10px 8px no-repeat;
+}
+.blockUI.blockPage > .blockUI-content,
+.blockUI.blockElement > .blockUI-content {
+  padding-left: 12px;
+  color: #fff;
+  font-size: large;
+}
+
+/* ant-table react-resizable */
+.ant-table .react-resizable {
+  position: relative;
+}
+
+.ant-table .react-resizable-handle {
+  position: absolute;
+  right: -5px;
+  bottom: 0;
+  width: 10px;
+  height: 100%;
+  cursor: col-resize;
+}
+
+/* antd table 结束 */
+
+/* 修复附件上传 数量超过一行时 upload 错位 BEGIN */
+.ant-upload-list-picture-card {
+  float: none !important;
+}
+
+/* END */
+
+/* 优化 使Table的水平滚动条仅在过长时显示 BEGIN */
+.ant-table-scroll {
+  > .ant-table-body {
+    // overflow-x: auto !important;
+  }
+}
+
+/* END */
+
+.gutter {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.gutter.gutter-vertical {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+}
+
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+.split {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.split,
+.gutter.gutter-horizontal {
+  float: left;
+}
+
+.anchorBL {
+  display: none;
+}
+
+/* fdx dynamicAttribute component BEGIN */
+
+.fdx-form {
+  .dynamic-form-item {
+    width: 100%;
+  }
+  .hiddenItem {
+    display: none !important;
+  }
+  .readOnlyItem {
+    textarea {
+      height: 32px;
+    }
+    > div:first-child > label {
+      &::before,
+      &::after {
+        visibility: hidden;
+      }
+    }
+    > div:last-child {
+      > div > span {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #d9d9d9;
+        > div {
+          width: 100%;
+          border: none;
+        }
+      }
+      input[disabled] {
+        color: #848484;
+        background: none;
+        border: none;
+        border-radius: 0;
+        cursor: text;
+      }
+      input,
+      textarea,
+      select {
+        &[readonly],
+        &[readonly]:focus,
+        &[readonly]:hover {
+          border: none;
+          border-radius: 0;
+          resize: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border-right-width: 0 !important;
+        }
+      }
+      .dynamic-input-number input {
+        &[readonly],
+        &[readonly]:focus,
+        &[readonly]:hover {
+          border: none;
+        }
+      }
+      .dynamic-select > div,
+      .dynamic-select > span {
+        border: none;
+        border-radius: 0;
+        background: #fff;
+        color: #848484;
+        cursor: text;
+        [role='menuitem'] {
+          background: #fff;
+          color: #848484;
+          border: none;
+        }
+      }
+      .dynamic-radio-group,
+      .dynamic-checkbox-group {
+        > label span,
+        input[type='radio'],
+        input[type='checkbox'] {
+          color: #848484;
+          cursor: text;
+        }
+      }
+      .dynamic-range-picker > span {
+        border: none;
+        border-radius: 0;
+        background: none;
+      }
+      .anticon {
+        display: none;
+      }
+      .dynamic-rate {
+        .anticon {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/* fdx dynamicAttribute component END */

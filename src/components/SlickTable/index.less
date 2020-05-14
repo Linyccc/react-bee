@@ -1,0 +1,29 @@
+@import '../../../config/theme/variables.less';
+@import '~antd/lib/style/themes/default.less';
+
+/* BEGIN 表格水平滚动时使用，保证td内容不换行  */
+.nowrap {
+  :global(.ant-table) {
+    td {
+      white-space: nowrap;
+    }
+    th {
+      white-space: nowrap;
+    }
+  }
+}
+
+/* END 表格水平滚动时使用，保证td内容不换行  */
+
+.wrapper {
+  position: relative;
+}
+:global(.slick-table-extra){
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  font-size: @font-size-base;
+}
+.records {
+  color: @text-color-secondary;
+}

@@ -1,0 +1,20 @@
+/** Step Wizard */
+.step-wrapper {
+  position: relative;
+}
+
+.step {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  pointer-events: inherit;
+}

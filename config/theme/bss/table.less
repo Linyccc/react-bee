@@ -1,0 +1,30 @@
+&.slick-table {
+  .ant-table {
+    .ant-table-title {
+      padding: 4px 8px !important;
+      line-height: @input-height-base;
+    }
+    &.ant-table-bordered {
+      .ant-table-title {
+        border-top: 0;
+      }
+    }
+    .ant-table-thead > tr > th {
+      padding: @slick-space-base / 2 @slick-space-base !important;
+      line-height: @input-height-base;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: @slick-space-base / 2 @slick-space-base !important;
+      line-height: @input-height-base;
+    }
+  }
+  // 表格分页
+  .ant-table-pagination.ant-pagination {
+    margin: @slick-space-base 0;
+  }
+}
+
+.slick-table-extra {
+  bottom: 8px !important;
+}
