@@ -27,7 +27,7 @@ class UserLayout extends React.PureComponent {
                 <div className={style.title}>
                   {/* <img src={logo} alt={formatMessage({ id: 'app.title' })} /> */}
                   <div>
-                    <img src={logo} alt={formatMessage({ id: 'app.title' })} /> xxx 企业门户
+                    <img src={logo} alt={formatMessage({ id: 'app.title' })} /> Bee-Portal
                   </div>
                 </div>
                 <div className={style.panel}>
